@@ -203,3 +203,9 @@ footer {
     transform: translateY(0);
   }
 }
+/* For small mobile phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
