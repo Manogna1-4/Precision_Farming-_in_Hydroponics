@@ -1,6 +1,7 @@
 /* === style.css === */
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f4f9f4;
   color: #333;
@@ -138,45 +139,40 @@ main {
     text-align: center;
   }
 }
+/* Main wrapper styling */
 main.graphs {
   padding: 20px;
-  text-align: left;
 }
 
+/* Align text to the left */
 main.graphs p {
   margin: 10px 0 5px;
   font-weight: bold;
+  text-align: left;
 }
 
-main.graphs iframe {
-  display: block;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  max-width: 100%;
-}
-
+/* Chart grid layout */
 .charts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr; /* One per row for strict left-align */
   gap: 2rem;
-  justify-items: center;
-  width: 100%;
-  padding: 2rem 1rem;
+  padding: 0;
   box-sizing: border-box;
+  width: 100%;
+}
+
+/* Prevent iframe scroll and fit */
+.charts-grid iframe {
+  width: 450px;
+  height: 260px;
+  border: 1px solid #ccc;
   overflow: hidden;
 }
 
-.charts-grid iframe {
-  width: 100% !important;
-  height: 300px !important;
-  overflow: hidden !important;
-  border: none !important;
-}
-
+/* Hide scrollbars inside iframe (just in case) */
 .charts-grid iframe::-webkit-scrollbar {
-  display: none;             /* For Chrome, Safari */
+  display: none;
 }
-
 
 .demo-link {
   margin-top: 2rem;
