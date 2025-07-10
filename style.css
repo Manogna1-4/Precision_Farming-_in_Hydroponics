@@ -77,30 +77,54 @@ main {
   color: #444;
 }
 
+/* Main content styling */
 .about-content {
-  max-width: 1000px;
-  margin: auto;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
-.about-content section {
-  margin-bottom: 2.5rem;
+/* Main heading */
+.main-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 60px;
+  animation: fadeIn 1s ease-in-out;
 }
 
-.about-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
+/* Subheadings (1,2,3...) styling */
+.about-content h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
-.about-content th,
-.about-content td {
-  border: 1px solid #ccc;
-  padding: 0.75rem;
-  text-align: left;
+/* Paragraphs */
+.about-content p {
+  text-align: justify;
+  margin-bottom: 30px;
 }
 
-.about-content th {
-  background-color: #f1f1f1;
+/* Fade-in animation for sections */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+  margin-bottom: 40px;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .team {
